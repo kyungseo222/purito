@@ -965,6 +965,9 @@ html{
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
+.section07 .inner .right .list .item_wrap .item img{
+    width: 30px;
+}
 .footer .inner{
     height: 100px;
     max-width: 1440px;
