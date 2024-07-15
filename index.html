@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퓨리토 서울</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        window.onload = () => {
+            let depth01 = document.querySelectorAll('.depth01');
+
+            let upBtn = document.querySelector('.up_btn');
+
+            let text = document.querySelectorAll('.text_wrap .text');
+            let leftBox = document.querySelector('.list .left_box');
+            let rightBox = document.querySelector('.list .right_box');
+            let image = document.querySelectorAll('.img img')
+
+            for(let i = 0; i < depth01.length; i++){
+                depth01[i].addEventListener('click', () => {
+                    if(getComputedStyle(depth01[i].nextElementSibling).display === 'none'){
+                        depth01[i].nextElementSibling.classList.add('on');
+                        depth01[i].classList.add('on');
+                    }else {
+                        depth01[i].nextElementSibling.classList.remove('on');
+                        depth01[i].classList.remove('on');
+                    }
+                })
+            }
+            var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+            });
+
+            upBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top : 0,
+                    behavior : 'smooth'
+                });
+            });
+            for(let i = 0; i < text.length; i++){
+                text[i].addEventListener
+            }
+        };//script end
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="inner">
+            <nav class="pc pc_nav">
+                <div class="left_nav">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#" class="depth01">product</a>
+                            <ul class="depth02">
+                                <div class="nav_flex">
+                                    <div class="menu1">
+                                        <li><a href="#">제품</a></li>
+                                        <li><a href="#">전 제품 보기</a></li>
+                                        <li><a href="#">베스트셀러</a></li>
+                                        <li><a href="#">신상품</a></li>
+                                    </div><!-- menu1 -->
+                                    <div class="menu1">
+                                        <li><a href="#">유형별</a></li>
+                                        <li><a href="#">클렌저</a></li>
+                                        <li><a href="#">토너 & 에센스</a></li>
+                                        <li><a href="#">세럼</a></li>
+                                        <li><a href="#">모이스처라이저</a></li>
+                                        <li><a href="#">선 케어</a></li>
+                                        <li><a href="#">메이크업</a></li>
+                                        <li><a href="#">스페셜 케어</a></li>
+                                    </div><!-- menu1 -->
+                                    <div class="menu1">
+                                        <li><a href="#">피부 고민 별</a></li>
+                                        <li><a href="#">홍조 및 민감성</a></li>
+                                        <li><a href="#">약해진 피부 장벽</a></li>
+                                        <li><a href="#">건조함</a></li>
+                                        <li><a href="#">트러블 & 여드름</a></li>
+                                        <li><a href="#">주름 & 처진 라인</a></li>
+                                        <li><a href="#">칙칙함</a></li>
+                                    </div><!-- menu1 -->
+                                    <div class="menu1">
+                                        <li><a href="#">원료 별</a></li>
+                                        <li><a href="#">센텔라 아시아티카</a></li>
+                                        <li><a href="#">해양심층수</a></li>
+                                        <li><a href="#">수국</a></li>
+                                    </div><!-- menu1 -->
+                                    <div class="menu1">
+                                        <li>
+                                            <a href="#">
+                                                <img src="img/gnb-banner-2.jpg" alt="gnb">
+                                            </a>
+                                            <div class="text">
+                                                <p>10초 급속 진정</p>
+                                                <span>Shop Now</span>
+                                            </div>
+                                        </li>
+                                    </div><!-- menu1 -->
+                                </div>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="depth01">Ingredients</a>
+                        </li>
+                        <li>
+                            <a href="#" class="depth01">Brand story</a>
+                        </li>
+                    </ul>
+                </div><!-- left_nav end -->
+
+                <h1>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="205.8" height="59.7" viewBox="0 0 205.8 59.7">
+                        <path d="M165.5,54.2c-1.6,0.8-3.2,1.2-4.9,1.2c-4.1,0-5.8-2.6-5.8-6.3V20.9h9l0.7-2.3h-9.7V7.8h-0.5c-2.5,5.4-7.2,11.6-12.9,13 c-0.1,0-0.1,0.1,0,0.1h6.2v29.8c0,5.9,3.4,8.9,8.5,8.9C162.2,59.6,165.1,55.2,165.5,54.2C165.7,54.2,165.6,54.2,165.5,54.2 L165.5,54.2z"></path>
+                        <path d="M74.3,52.8c0.3,3,0.9,4.9,1.8,6.4L87,57.1c0.1,0,0.1-0.1,0-0.1c-1.7-0.1-5.9-0.8-5.9-7V17.9h-0.5l-12.5,2.9 c0,0-0.1,0.1,0,0.1c3.7,0.4,5.8,2,5.8,4.9v20.7c0,2,0.1,3.7,0.2,5.2c-1.9,2.4-4.9,4.1-8.5,4.1c-5.7,0-8-3.8-8-9.6V17.9h-0.5 l-12.5,2.9c0,0-0.1,0.1,0,0.1c3.7,0.4,5.8,2,5.8,4.9v21c0,7.7,3.7,12.7,11.6,12.7C67.6,59.6,72.2,56.1,74.3,52.8z"></path>
+                        <path d="M36.5,4.4C33,1.8,28.2,0,23.2,0H0c0,0.1,0,0,0,0.1c1.8,0.3,5.5,1.2,5.5,5.8v46.9c0,4.9-3.8,5.5-5.5,5.8c0,0.1,0,0.1,0,0.1 h19.9c0-0.1,0-0.1,0-0.1c-1.6-0.3-6.3-1-6.3-5.8V2.3h7.6c4.8,0,12.9,2.2,12.9,15c0,9.5-5.5,15.9-16.4,16.2c0,0-0.1,0-0.1,0.1 c0,0,0,0.1,0.1,0.1c4.7,0.3,9.1,0.3,13.5-1c7-2.2,11.5-8.4,11.5-15.8C42.6,11.6,40.5,7.4,36.5,4.4z"></path>
+                        <path d="M134.8,52.8V17.9h-0.5l-12.5,2.9v0.1c4,0.5,5.8,3.4,5.8,6.5v25.3c0,4.8-3.8,5.5-5.5,5.8c0,0.1,0,0.1,0,0.1h18.1 c0-0.1,0-0.1,0-0.1C138.6,58.3,134.8,57.6,134.8,52.8L134.8,52.8z"></path>
+                        <path d="M130.8,12.2c2.4,0,4.4-2,4.4-4.4c0-2.3-2-4.4-4.4-4.4s-4.4,2-4.4,4.4C126.4,10.1,128.4,12.2,130.8,12.2z"></path>
+                        <path d="M186.7,17.9c-10.1,0-19.1,8.6-19.1,21.1s9,20.7,19.1,20.7s19.1-8.6,19.1-21.1S196.7,17.9,186.7,17.9z M187.2,58.1 c-7.2,0-11.5-10.4-11.5-21s3.7-17.8,10.5-17.8s11.5,9.2,11.5,21C197.7,50.6,193.9,58.1,187.2,58.1z"></path>
+                        <path d="M94.8,27.5v25.3c0,4.8-3.8,5.5-5.5,5.8c0,0.1,0,0.1,0,0.1h18.1c0-0.1,0-0.1,0-0.1c-1.6-0.3-5.5-1-5.5-5.9V17.9h-0.5 l-12.5,2.9v0.1C93.1,21.4,94.8,24.4,94.8,27.5L94.8,27.5z"></path>
+                        <path d="M116.4,24.4c1.9-1.2,2.6-4.4,2.6-4.4s-2.1-2.1-6.3-2.1c-3.3,0-6.1,1.5-7.9,4.8c-1,1.7-1.3,3.6-1.3,3.6c1.4-2.7,4-3,5.3-2.8 c1.8,0.2,2.4,0.9,3.7,1.3C113.7,25.2,115.2,25.1,116.4,24.4z"></path>
+                        </svg></a>
+                </h1>
+                
+                <div class="right_nav">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#" class="depth01">community</a>
+                            <ul class="depth02">
+                                <li><a href="#">Create Me</a></li>
+                                <li><a href="#">News & Press</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="depth01">Help</a>
+                            <ul class="depth02">
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Stores</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="depth01">
+                                <img src="img/icons8-search-48.png" alt="search">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="depth01">
+                                <img src="img/icons8-globe-50.png" alt="globe">
+                            </a>
+                            <ul class="depth02">
+                                <li><a href="#">Eng</a></li>
+                                <li><a href="#">Kor</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav><!-- pc_nav end -->
+
+            <nav class="mobile mobile_nav">
+                <ul class="gnb">
+                    <li>
+                        <a href="#" class="depth01">Product</a>
+                        <ul class="depth02">
+                            <div class="menu1">
+                                <li><a href="#">제품</a></li>
+                                <li><a href="#">전 제품 보기</a></li>
+                                <li><a href="#">베스트셀러</a></li>
+                                <li><a href="#">신상품</a></li>
+                            </div><!-- menu1 -->
+                            <div class="menu1">
+                                <li><a href="#">유형별</a></li>
+                                <li><a href="#">클렌저</a></li>
+                                <li><a href="#">토너 & 에센스</a></li>
+                                <li><a href="#">세럼</a></li>
+                                <li><a href="#">모이스처라이저</a></li>
+                                <li><a href="#">선 케어</a></li>
+                                <li><a href="#">메이크업</a></li>
+                                <li><a href="#">스페셜 케어</a></li>
+                            </div><!-- menu1 -->
+                            <div class="menu1">
+                                <li><a href="#">피부 고민 별</a></li>
+                                <li><a href="#">홍조 및 민감성</a></li>
+                                <li><a href="#">약해진 피부 장벽</a></li>
+                                <li><a href="#">건조함</a></li>
+                                <li><a href="#">트러블 & 여드름</a></li>
+                                <li><a href="#">주름 & 처진 라인</a></li>
+                                <li><a href="#">칙칙함</a></li>
+                            </div><!-- menu1 -->
+                            <div class="menu1">
+                                <li><a href="#">원료 별</a></li>
+                                <li><a href="#">센텔라 아시아티카</a></li>
+                                <li><a href="#">해양심층수</a></li>
+                                <li><a href="#">수국</a></li>
+                            </div><!-- menu1 -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="depth01">Community</a>
+                        <ul class="depth02">
+                            <li><a href="#">Create Me</a></li>
+                            <li><a href="#">News & Press</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="depth01">Help</a>
+                        <ul class="depth02">
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Stores</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/gnb-banner-2.jpg" alt="gnb">
+                        </a>
+                        <div class="text">
+                            <p>10초 급속 진정</p>
+                            <span>Shop Now</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav><!-- mobile_nav end -->
+        </div><!-- inner end -->
+    </header><!-- header end -->
+    <button class="up_btn">
+        <img src="img/icons8-up-48.png" alt="">
+    </button><!-- up_btn end -->
+    <section class="main_visual">
+        <div class="video">
+            <figure>
+                <iframe src="https://player.vimeo.com/video/912506867?quality=1080p&muted=1&autoplay=1&autopause=0&loop=1&background=1&controls=0" frameborder="0"></iframe>
+            </figure>
+        </div>
+    </section><!-- main_visual end -->
+
+    <section class="section01">
+        <div class="inner">
+            <h2>Discover our ( Best ) Sellers</h2>
+            <div class="top_img">
+                <img src="img/main-hero.jpg" alt="img">
+                <div class="text">
+                    <h3>피부 진정의 최애템</h3>
+                    <h1>원더 릴리프 센텔라 세럼 언센티드</h1>
+                    <p>민감한 피부를 즉시 진정시킬 단 하나의 구원자를 경험해 보세요!</p>
+                    <button><a href="#"><span>(</span> Shop Now <span>)</span></a></button>
+                </div><!-- text end -->
+            </div><!-- top_img end -->
+
+            <div class="list">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <figure>
+                            <img src="img/centella_cream_unscented-thumb-x2.png" alt="img">
+                            <img src="img/centella_cream_unscented-hover.jpg" alt="img">
+                        </figure>
+                        <div class="text">
+                            <h4>원더 릴리프 센텔라 크림 언센티브</h4>
+                            <span>25,000원</span>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <figure>
+                            <img src="img/centella_eyecream-thumb-x2.png" alt="img">
+                            <img src="img/centella_eyecream-hover.jpg" alt="img">
+                        </figure>
+                        <div class="text">
+                            <h4>원더 릴리프 센텔라 아이크림</h4>
+                            <span>19,000원</span>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <figure>
+                            <img src="img/centella_serum-thumb-x2.png" alt="img">
+                            <img src="img/centella_serum-hover.jpg" alt="img">
+                        </figure>
+                        <div class="text">
+                            <h4>원더 릴리프 센텔라 세럼</h4>
+                            <span>28,000원</span>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <figure>
+                            <img src="img/centella_cream-thumb-x2.png" alt="img">
+                            <img src="img/centella_cream-hover.jpg" alt="img">
+                        </figure>
+                        <div class="text">
+                            <h4>원더 릴리프 센텔라 크림</h4>
+                            <span>25,000원</span>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <figure>
+                            <img src="img/centella_toner_unscented-thumb-x2.png" alt="img">
+                            <img src="img/centella_toner_unscented-hover.jpg" alt="img">
+                        </figure>
+                        <div class="text">
+                            <h4>원더 릴리프 센텔라 토너 언센티드</h4>
+                            <span>28,000원</span>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <figure>
+                            <img src="img/centella_eyecream_unscented-thumb-x2.png" alt="img">
+                            <img src="img/centella_eyecream_unscented-hover.jpg" alt="img">
+                        </figure>
+                        <div class="text">
+                            <h4>원더 릴리프 센텔라 아이크림 언센티브</h4>
+                            <span>19,000원</span>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <figure>
+                            <img src="img/centella_toner-thumb-x2.png" alt="img">
+                            <img src="img/centella_toner-hover.jpg" alt="img">
+                        </figure>
+                        <div class="text">
+                            <h4>원더 릴리프 센텔라 토너</h4>
+                            <span>28,000원</span>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <figure>
+                            <img src="img/centella_cream_unscented-thumb-x2.png" alt="img">
+                            <img src="img/centella_cream_unscented-hover (1).jpg" alt="img">
+                        </figure>
+                        <div class="text">
+                            <h4>원더 릴리프 센텔라 크림 언센티드</h4>
+                            <span>25,000원</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+
+                  
+                <!-- <div class="item">
+                    <figure>
+                        <img src="img/centella_cream_unscented-thumb-x2.png" alt="img">
+                        <img src="img/centella_cream_unscented-hover.jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>원더 릴리프 센텔라 크림 언센티브</h4>
+                        <span>25,000원</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="img/centella_eyecream-thumb-x2.png" alt="img">
+                        <img src="img/centella_eyecream-hover.jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>원더 릴리프 센텔라 아이크림</h4>
+                        <span>19,000원</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="img/centella_serum-thumb-x2.png" alt="img">
+                        <img src="img/centella_serum-hover.jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>원더 릴리프 센텔라 세럼</h4>
+                        <span>28,000원</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="img/centella_cream-thumb-x2.png" alt="img">
+                        <img src="img/centella_cream-hover.jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>원더 릴리프 센텔라 크림</h4>
+                        <span>25,000원</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="img/centella_toner_unscented-thumb-x2.png" alt="img">
+                        <img src="img/centella_toner_unscented-hover.jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>원더 릴리프 센텔라 토너 언센티드</h4>
+                        <span>28,000원</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="img/centella_eyecream_unscented-thumb-x2.png" alt="img">
+                        <img src="img/centella_eyecream_unscented-hover.jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>원더 릴리프 센텔라 아이크림 언센티브</h4>
+                        <span>19,000원</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="img/centella_toner-thumb-x2.png" alt="img">
+                        <img src="img/centella_toner-hover.jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>원더 릴리프 센텔라 토너</h4>
+                        <span>28,000원</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="img/centella_cream_unscented-thumb-x2.png" alt="img">
+                        <img src="img/centella_cream_unscented-hover (1).jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>원더 릴리프 센텔라 크림 언센티드</h4>
+                        <span>25,000원</span>
+                    </div>
+                </div> -->
+
+                <!-- <div class="button_wrap">
+                    <button class="prev">
+                        <img src="img/icons8-back-30.png" alt="img">
+                    </button>
+                    <button class="next">
+                        <img src="img/icons8-forward-30.png" alt="img">
+                    </button>
+                </div> -->
+            </div><!-- list end -->
+        </div><!-- inner end -->
+    </section><!-- section01 end -->
+
+    <section class="section02">
+        <div class="inner">
+            <div class="title">
+                <h2>대한민국에서 </br>
+                    가장 좋은 <span>천연 원료</span>를 찾기 위한 </h2> 
+                </h2>
+                <h3>
+                    퓨리토의 <span>탐험</span>과 <span>열정</span>은 계속 됩니다.
+                </h3>
+            </div><!-- title end -->
+
+            <div class="list">
+                <div class="left_box">
+                    <div class="text_wrap">
+                        <div class="text text01">
+                            <h5>강력한 진정</h5>
+                            <h4>한국의 센텔라 아시아티카</h4>
+                        </div><!-- text01 end -->
+                        <div class="text text02">
+                            <h5>풍부한 수분</h5>
+                            <h4>해양심층수</h4>
+                        </div><!-- text02 end -->
+                        <div class="text text03">
+                            <h5>시간초월 웰-에이징</h5>
+                            <h4>제주 수국</h4>
+                        </div><!-- text03 end -->
+                    </div><!-- text_wrap end -->
+                    <div class="img">
+                        <img src="img/main-ingredient-centella-bg.jpg" alt="" class="on">
+                        <img src="img/main-ingredient-deepsea-bg.jpg" alt="">
+                        <img src="main-ingredient-Hydrangea-bg.jpg" alt="">
+                    </div>
+                </div><!-- left_box end -->
+
+                <div class="right_box">
+                    <div class="right_text01">
+                        <p>한국의 다양한 지형에서 자란 센텔라는 놀라운 진정 효과로 유명합니다.</p>
+                    </div><!-- right_text01 end -->
+                    <div class="right_text02">
+                        <p>한국 동해의 깊은 바다에서 채취한 해양심층수는 우리 피부에 충분한 미네랄을 공급합니다.</p>
+                    </div><!-- right_text02 end -->
+                    <div class="right_text03">
+                        <p>제주 수국의 풍부한 영양감이 피부 탄력과 주름 감소를 도와줍니다.</p>
+                    </div><!-- right_text03 end -->
+                </div><!-- right_box end -->
+            </div><!-- list end -->
+
+            <div class="button">
+                <div class="btn_text">
+                    <a href="#">
+                        <p>(</p>
+                        <p>더 많은 한국 원료를 만나 보세요</p>
+                        <figure><img src="img/icons8-next-page-24.png" alt="img"></figure>
+                        <p>)</p>
+                    </a>
+                </div><!-- btn_text end -->
+            </div><!-- button end -->
+        </div><!-- inner end -->
+    </section><!-- section02 end -->
+
+    <section class="section03">
+        <div class="inner">
+            <figure>
+                <img src="img/Deep-Sea_New-Arrivals_pc.jpg" alt="img">
+            </figure>
+            <div class="text">
+                <h4>촉촉한 피부로 수분 폭탄 듀오</h4>
+                <p>피부 속까지 필요한 수분 공급을 촉촉하게 만드는 동해 해양심층수 라인</p>
+                <button><a href="#"><span>(</span> Dive On In <span>)</span></a></button>
+            </div><!-- text end -->
+            <div class="text_top">
+                <p>New Arrivals</p>
+            </div><!-- text_top end -->
+        </div><!-- inner end -->
+    </section><!-- section03 end -->
+
+    <section class="text">
+        <div class="text_slide">
+            <span>Rooted in Wonder. Rooted in Wonder.</span>
+            <span>Rooted in Wonder. Rooted in Wonder.</span>
+            <span>Rooted in Wonder. Rooted in Wonder.</span>
+            <span>Rooted in Wonder. Rooted in Wonder.</span>
+        </div><!-- text_slide end -->
+    </section><!-- text end -->
+
+    <section class="section04">
+        <div class="inner">
+            <figure>
+                <img src="img/main-sensorial.jpg" alt="img">
+            </figure>
+
+            <div class="text">
+                <h4>Sensorial </br>
+                    Skincare
+                </h4>
+                <p>세심하게 제작된 우리의 스킨케어 제품은 뛰어난 결과 뿐만 아니라 즐거운 감각적 경험도 전달합니다.</p>
+            </div><!-- text end -->
+        </div><!-- inner end -->
+    </section><!-- section04 end -->
+
+    <section class="section05">
+        <div class="inner">
+            <figure>
+                <img src="img/main-brandstory-01.jpg" alt="img">
+            </figure>
+            <div class="text">
+                <h4>Touch Your ( Seoul )</h4>
+                <h5>퓨리토 서울! 그 Inspiration의 시작</h5>
+            </div><!-- text end -->
+        </div><!-- inner end -->
+    </section><!-- section05 end -->
+    
+    <section class="section06">
+        <div class="inner">
+            <h2>Follow </br>
+                our Seoul-full feed
+            </h2>
+            <div class="img_top">
+                <figure>
+                    <img src="img/main-insta-01.jpg" alt="img">
+                </figure>
+                <figure>
+                    <img src="img/main-insta-02.jpg" alt="img">
+                </figure>
+                <figure>
+                    <img src="img/main-insta-03.jpg" alt="img">
+                </figure>
+            </div><!-- img_top end -->
+
+            <div class="img_bottom">
+                <div class="left">
+                    <p>follow us @purito_official</p>
+                </div><!-- left end -->
+                <div class="right">
+                    <figure>
+                        <img src="img/main-insta-04.jpg" alt="img">
+                    </figure>
+                    <figure>
+                        <img src="img/main-insta-05.jpg" alt="img">
+                    </figure>
+                </div><!-- right end -->
+            </div><!-- img_bottom end -->
+        </div><!-- inner end -->
+    </section><!-- section06 end -->
+
+    <section class="section07">
+        <div class="inner">
+            <div class="left">
+                <h4>퓨리토 서울은 한국의 원료와 문화에서 영감을 받아 즐거운 감각적 경험을 만드는 한국의 컨템포러리 스킨케어 브랜드입니다.</h4>
+            </div><!-- left end -->
+
+            <div class="right">
+                <div class="list">
+                    <span>(</span>
+                    <div class="item_wrap">
+                        <div class="item">
+                            <h4>We are Pusito Seoul</h4>
+                            <p>About Us</p>
+                            <p>Blog</p>
+                            <p>News</p>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <h4>Products</h4>
+                            <p>Best Sellers</p>
+                            <p>New Arrivals</p>
+                            <p>All Products</p>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <h4>Help</h4>
+                            <p>FAQ</p>
+                            <p>Contact Us</p>
+                            <p>Stores</p>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <img src="img/icons8-tiktok-32.png" alt="img">
+                            <img src="img/icons8-insta-24.png" alt="img">
+                            <img src="img/icons8-youtube-24.png" alt="img">
+                        </div><!-- item end -->
+                    </div><!-- item_wrap end -->
+                    <span>)</span>
+                </div><!-- list end -->
+            </div><!-- right end -->
+        </div><!-- inner end -->
+    </section><!-- section07 end -->
+
+    <footer class="footer">
+        <div class="inner">
+            <p>© 2024 Purito. All rights reserved.</p>
+        </div><!-- inner end -->
+    </footer><!-- footer end -->
+</body>
+</html>
