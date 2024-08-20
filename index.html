@@ -10,17 +10,26 @@
     <script>
         window.onload = () => {
             let depth01 = document.querySelectorAll('.depth01');
+            let depth = document.querySelectorAll('.gnb > li');
+            let depth02 = document.querySelectorAll('.depth02');
 
             let upBtn = document.querySelector('.up_btn');
 
             let text = document.querySelectorAll('.text_wrap .text');
             let leftBox = document.querySelector('.list .left_box');
             let rightBox = document.querySelector('.list .right_box');
+            let rightItem = document.querySelectorAll('.right_box .right_item');
             let image = document.querySelectorAll('.img img')
 
             for(let i = 0; i < depth01.length; i++){
-                depth01[i].addEventListener('click', () => {
+                depth01[i].addEventListener('mouseenter', () => {
                     if(getComputedStyle(depth01[i].nextElementSibling).display === 'none'){
+                        depth01.forEach((header) => {
+                            header.classList.remove('on');
+                        })
+                        depth02.forEach((header02) => {
+                            header02.classList.remove('on');
+                        })
                         depth01[i].nextElementSibling.classList.add('on');
                         depth01[i].classList.add('on');
                     }else {
@@ -28,7 +37,13 @@
                         depth01[i].classList.remove('on');
                     }
                 })
+                depth[i].addEventListener('mouseleave', () => {
+                    depth01[i].nextElementSibling.classList.remove('on');
+                    depth01[i].classList.remove('on');
+                })
             }
+            //header
+
             var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3,
             spaceBetween: 20,
@@ -41,6 +56,7 @@
             prevEl: ".swiper-button-prev",
             },
             });
+            //section01
 
             upBtn.addEventListener('click', () => {
                 window.scrollTo({
@@ -51,6 +67,35 @@
             for(let i = 0; i < text.length; i++){
                 text[i].addEventListener
             }
+            //upBtn
+
+            for(let i = 0; i < text.length; i++){
+                text[i].addEventListener('mouseenter', () => {
+                    image.forEach((bg) => {
+                        bg.classList.remove('on');
+                    })
+                    rightItem.forEach((right) => {
+                        right.classList.remove('on');
+                    })
+                    image[i].classList.add('on');
+                    rightItem[i].classList.add('on');
+                });
+            }
+            //section02
+
+            var swiper = new Swiper(".purito", {
+            spaceBetween: 30,
+            effect: "fade",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            });
+
         };//script end
     </script>
 </head>
@@ -98,7 +143,7 @@
                                     <div class="menu1">
                                         <li>
                                             <a href="#">
-                                                <img src="img/gnb-banner-2.jpg" alt="gnb">
+                                                <figure><img src="img/gnb-banner-2.jpg" alt=""></figure>
                                             </a>
                                             <div class="text">
                                                 <p>10초 급속 진정</p>
@@ -150,12 +195,12 @@
                         </li>
                         <li>
                             <a href="#" class="depth01">
-                                <img src="img/icons8-search-48.png" alt="search">
+                                <figure><img src="img/icons8-search-48.png" alt="search"></figure>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="depth01">
-                                <img src="img/icons8-globe-50.png" alt="globe">
+                                <figure><img src="img/icons8-globe-50.png" alt="globe"></figure>
                             </a>
                             <ul class="depth02">
                                 <li><a href="#">Eng</a></li>
@@ -252,7 +297,16 @@
                     <h3>피부 진정의 최애템</h3>
                     <h1>원더 릴리프 센텔라 세럼 언센티드</h1>
                     <p>민감한 피부를 즉시 진정시킬 단 하나의 구원자를 경험해 보세요!</p>
-                    <button><a href="#"><span>(</span> Shop Now <span>)</span></a></button>
+                    <button>
+                        <a href="#">
+                            <span>(</span> 
+                            <p>Shop Now</p>
+                            <figure>
+                                <img src="img/icons8-next-page-50(1).png" alt="">
+                            </figure>
+                            <span>)</span>
+                        </a>
+                    </button>
                 </div><!-- text end -->
             </div><!-- top_img end -->
 
@@ -350,104 +404,6 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                   </div>
-
-                  
-                <!-- <div class="item">
-                    <figure>
-                        <img src="img/centella_cream_unscented-thumb-x2.png" alt="img">
-                        <img src="img/centella_cream_unscented-hover.jpg" alt="img">
-                    </figure>
-                    <div class="text">
-                        <h4>원더 릴리프 센텔라 크림 언센티브</h4>
-                        <span>25,000원</span>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <figure>
-                        <img src="img/centella_eyecream-thumb-x2.png" alt="img">
-                        <img src="img/centella_eyecream-hover.jpg" alt="img">
-                    </figure>
-                    <div class="text">
-                        <h4>원더 릴리프 센텔라 아이크림</h4>
-                        <span>19,000원</span>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <figure>
-                        <img src="img/centella_serum-thumb-x2.png" alt="img">
-                        <img src="img/centella_serum-hover.jpg" alt="img">
-                    </figure>
-                    <div class="text">
-                        <h4>원더 릴리프 센텔라 세럼</h4>
-                        <span>28,000원</span>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <figure>
-                        <img src="img/centella_cream-thumb-x2.png" alt="img">
-                        <img src="img/centella_cream-hover.jpg" alt="img">
-                    </figure>
-                    <div class="text">
-                        <h4>원더 릴리프 센텔라 크림</h4>
-                        <span>25,000원</span>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <figure>
-                        <img src="img/centella_toner_unscented-thumb-x2.png" alt="img">
-                        <img src="img/centella_toner_unscented-hover.jpg" alt="img">
-                    </figure>
-                    <div class="text">
-                        <h4>원더 릴리프 센텔라 토너 언센티드</h4>
-                        <span>28,000원</span>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <figure>
-                        <img src="img/centella_eyecream_unscented-thumb-x2.png" alt="img">
-                        <img src="img/centella_eyecream_unscented-hover.jpg" alt="img">
-                    </figure>
-                    <div class="text">
-                        <h4>원더 릴리프 센텔라 아이크림 언센티브</h4>
-                        <span>19,000원</span>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <figure>
-                        <img src="img/centella_toner-thumb-x2.png" alt="img">
-                        <img src="img/centella_toner-hover.jpg" alt="img">
-                    </figure>
-                    <div class="text">
-                        <h4>원더 릴리프 센텔라 토너</h4>
-                        <span>28,000원</span>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <figure>
-                        <img src="img/centella_cream_unscented-thumb-x2.png" alt="img">
-                        <img src="img/centella_cream_unscented-hover (1).jpg" alt="img">
-                    </figure>
-                    <div class="text">
-                        <h4>원더 릴리프 센텔라 크림 언센티드</h4>
-                        <span>25,000원</span>
-                    </div>
-                </div> -->
-
-                <!-- <div class="button_wrap">
-                    <button class="prev">
-                        <img src="img/icons8-back-30.png" alt="img">
-                    </button>
-                    <button class="next">
-                        <img src="img/icons8-forward-30.png" alt="img">
-                    </button>
-                </div> -->
             </div><!-- list end -->
         </div><!-- inner end -->
     </section><!-- section01 end -->
@@ -482,18 +438,27 @@
                     <div class="img">
                         <img src="img/main-ingredient-centella-bg.jpg" alt="" class="on">
                         <img src="img/main-ingredient-deepsea-bg.jpg" alt="">
-                        <img src="main-ingredient-Hydrangea-bg.jpg" alt="">
+                        <img src="img/main-ingredient-Hydrangea-bg.jpg" alt="">
                     </div>
                 </div><!-- left_box end -->
 
                 <div class="right_box">
-                    <div class="right_text01">
+                    <div class="right_item on">
+                        <figure>
+                            <img src="img/main-ingredient-centella-img.jpg" alt="">
+                        </figure>
                         <p>한국의 다양한 지형에서 자란 센텔라는 놀라운 진정 효과로 유명합니다.</p>
                     </div><!-- right_text01 end -->
-                    <div class="right_text02">
+                    <div class="right_item">
+                        <figure>
+                            <img src="img/main-ingredient-deepsea-img.jpg" alt="">
+                        </figure>
                         <p>한국 동해의 깊은 바다에서 채취한 해양심층수는 우리 피부에 충분한 미네랄을 공급합니다.</p>
                     </div><!-- right_text02 end -->
-                    <div class="right_text03">
+                    <div class="right_item">
+                        <figure>
+                            <img src="img/main-ingredient-Hydrangea.jpg" alt="">
+                        </figure>
                         <p>제주 수국의 풍부한 영양감이 피부 탄력과 주름 감소를 도와줍니다.</p>
                     </div><!-- right_text03 end -->
                 </div><!-- right_box end -->
@@ -504,7 +469,7 @@
                     <a href="#">
                         <p>(</p>
                         <p>더 많은 한국 원료를 만나 보세요</p>
-                        <figure><img src="img/icons8-next-page-24.png" alt="img"></figure>
+                        <figure><img src="img/icons8-next-page-50.png" alt="img"></figure>
                         <p>)</p>
                     </a>
                 </div><!-- btn_text end -->
@@ -520,7 +485,16 @@
             <div class="text">
                 <h4>촉촉한 피부로 수분 폭탄 듀오</h4>
                 <p>피부 속까지 필요한 수분 공급을 촉촉하게 만드는 동해 해양심층수 라인</p>
-                <button><a href="#"><span>(</span> Dive On In <span>)</span></a></button>
+                <button>
+                    <a href="#">
+                        <span>(</span> 
+                        <p>Dive On In</p>
+                        <figure>
+                            <img src="img/icons8-next-page-50(1).png" alt="">
+                        </figure>
+                        <span>)</span>
+                    </a>
+                </button>
             </div><!-- text end -->
             <div class="text_top">
                 <p>New Arrivals</p>
@@ -554,13 +528,74 @@
 
     <section class="section05">
         <div class="inner">
-            <figure>
-                <img src="img/main-brandstory-01.jpg" alt="img">
-            </figure>
-            <div class="text">
-                <h4>Touch Your ( Seoul )</h4>
-                <h5>퓨리토 서울! 그 Inspiration의 시작</h5>
-            </div><!-- text end -->
+            <div class="swiper purito">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure>
+                        <img src="img/main-brandstory-01.jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>Touch Your ( Seoul )</h4>
+                        <h5>퓨리토 서울! 그 Inspiration의 시작</h5>
+                    </div><!-- text end -->
+                  </div><!-- swiperslide end -->
+
+                  <div class="swiper-slide">
+                    <figure>
+                        <img src="img/main-brandstory-02.jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>Touch Your ( Urbanity )</h4>
+                        <p>N Seoul Tower N서울타워</p>
+                    </div><!-- text end -->
+                  </div><!-- swiperslide end -->
+
+                  <div class="swiper-slide">
+                    <figure>
+                        <img src="img/main-brandstory-03.jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>Touch Your ( Nature )</h4>
+                        <p>Seoul Forest Park 성수 서울숲</p>
+                    </div><!-- text end -->
+                  </div><!-- swiperslide end -->
+
+                  <div class="swiper-slide">
+                    <figure>
+                        <img src="img/main-brandstory-04.jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>Touch Your ( Life )</h4>
+                        <p>Yeouido Hangang Park 여의도 한강 공원</p>
+                    </div><!-- text end -->
+                  </div><!-- swiperslide end -->
+
+                  <div class="swiper-slide">
+                    <figure>
+                        <img src="img/main-brandstory-last-bg.jpg" alt="img">
+                    </figure>
+                    <div class="text">
+                        <h4>Touch Your ( Seoul )</h4>
+                        <h5>우리는 자연과 도시가 조화를 이루는 </br>
+                            서울의 풍부한 문화와 </br>
+                            무한한 창의성을 탐험합니다.
+                        </h5>
+                        <button>
+                            <a href="#">
+                                <span>(</span> 
+                                <p>Learn More</p>
+                                <figure>
+                                    <img src="img/icons8-next-page-50(1).png" alt="img">
+                                </figure>
+                                <span>)</span>
+                            </a>
+                        </button>
+                    </div><!-- text end -->
+                  </div><!-- swiperslide end -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </div><!-- inner end -->
     </section><!-- section05 end -->
     
